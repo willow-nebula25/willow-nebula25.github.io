@@ -1,0 +1,1314 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黑料海角网 | 官方视频门户,深度档案与真实影像的聚合社区</title>
+<meta name="description" content="黑料海角网官方网站，聚焦深度档案、真实影像与创作者社区，以专业态度持续运营高清原创内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1117'/%3E%3Cpath d='M20 46V18l24 14-24 14z' fill='%23ff4d5a'/%3E%3Ccircle cx='46' cy='20' r='6' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --hl-angle-bg:#0b0e13;
+    --hl-angle-panel:#12161e;
+    --hl-angle-panel2:#171c26;
+    --hl-angle-line:#242b38;
+    --hl-angle-text:#e8ecf3;
+    --hl-angle-sub:#9aa4b5;
+    --hl-angle-red:#ff4d5a;
+    --hl-angle-redsoft:rgba(255,77,90,.14);
+    --hl-angle-gold:#ffd166;
+    --hl-angle-cyan:#4fd1c5;
+    --hl-angle-radius:14px;
+    --hl-angle-stickyH:96px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--hl-angle-bg);
+    color:var(--hl-angle-text);
+    font-family:"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit;text-decoration:none}
+  ul{list-style:none}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  .hl-angle-wrap{width:min(1180px,92vw);margin:0 auto}
+  section[id]{scroll-margin-top:var(--hl-angle-stickyH)}
+
+  /* ===== 吸顶区 ===== */
+  .hl-angle-sticky{position:sticky;top:0;z-index:90}
+  .hl-angle-notice{
+    background:linear-gradient(90deg,#ff4d5a,#b3243a 55%,#6d1424);
+    color:#fff;font-size:.82rem;letter-spacing:.02em;
+  }
+  .hl-angle-notice .hl-angle-wrap{display:flex;align-items:center;gap:10px;padding:7px 0;overflow:hidden}
+  .hl-angle-notice-tag{
+    flex:0 0 auto;background:rgba(0,0,0,.32);border-radius:4px;
+    padding:1px 8px;font-weight:700;font-size:.74rem;
+  }
+  .hl-angle-notice-ticker{flex:1 1 auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+  .hl-angle-notice-ticker b{color:#ffe9a8}
+  .hl-angle-notice-more{flex:0 0 auto;font-weight:600;border-bottom:1px dashed rgba(255,255,255,.6)}
+
+  .hl-angle-header{
+    background:rgba(11,14,19,.94);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--hl-angle-line);
+  }
+  .hl-angle-headbar{
+    display:flex;align-items:center;gap:18px;padding:12px 0;
+  }
+  .hl-angle-logo{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+  .hl-angle-logo-mark{
+    width:38px;height:38px;border-radius:10px;
+    background:linear-gradient(140deg,#ff4d5a,#8c1f2e);
+    display:grid;place-items:center;font-weight:900;font-size:1rem;color:#fff;
+    box-shadow:0 0 0 1px rgba(255,255,255,.08),0 6px 18px rgba(255,77,90,.28);
+  }
+  .hl-angle-logo-text{font-weight:800;font-size:1.06rem;letter-spacing:.04em;line-height:1.2}
+  .hl-angle-logo-text small{display:block;font-weight:400;font-size:.66rem;color:var(--hl-angle-sub);letter-spacing:.18em}
+  .hl-angle-nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+  .hl-angle-nav a{
+    font-size:.88rem;color:var(--hl-angle-sub);padding:6px 12px;border-radius:8px;
+    transition:color .2s,background .2s;
+  }
+  .hl-angle-nav a:hover,.hl-angle-nav a:focus-visible{color:#fff;background:var(--hl-angle-panel2)}
+  .hl-angle-burger{
+    margin-left:auto;display:none;width:40px;height:36px;border:1px solid var(--hl-angle-line);
+    border-radius:8px;place-items:center;gap:4px;flex-direction:column;
+  }
+  .hl-angle-burger span{display:block;width:18px;height:2px;background:var(--hl-angle-text);border-radius:2px;transition:.25s}
+  .hl-angle-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .hl-angle-burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .hl-angle-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  .hl-angle-search{
+    display:flex;align-items:center;gap:6px;background:var(--hl-angle-panel);
+    border:1px solid var(--hl-angle-line);border-radius:10px;padding:5px 6px 5px 12px;min-width:220px;
+  }
+  .hl-angle-search input{
+    background:none;border:none;outline:none;color:var(--hl-angle-text);
+    font-size:.86rem;width:100%;min-width:0;
+  }
+  .hl-angle-search input::placeholder{color:#5f6b7d}
+  .hl-angle-search button{
+    flex:0 0 auto;background:var(--hl-angle-red);color:#fff;border-radius:7px;
+    font-size:.8rem;font-weight:700;padding:5px 12px;
+  }
+  .hl-angle-searchmsg{
+    font-size:.78rem;color:var(--hl-angle-gold);padding:0 0 8px;min-height:0;
+  }
+
+  /* ===== 首屏 全幅主视觉背景与浮动文字 ===== */
+  .hl-angle-hero{position:relative;overflow:hidden;border-bottom:1px solid var(--hl-angle-line)}
+  .hl-angle-hero-art{position:relative;min-height:min(78vh,640px);display:flex;align-items:flex-end}
+  .hl-angle-hero-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hl-angle-hero-art::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(90deg,rgba(9,12,17,.96) 8%,rgba(9,12,17,.72) 46%,rgba(9,12,17,.28) 78%,rgba(9,12,17,.55));
+  }
+  .hl-angle-hero-float{position:relative;z-index:2;padding:56px 0 48px;max-width:760px}
+  .hl-angle-hero-kicker{
+    display:inline-flex;align-items:center;gap:8px;font-size:.76rem;letter-spacing:.22em;
+    color:var(--hl-angle-gold);border:1px solid rgba(255,209,102,.42);
+    padding:3px 12px;border-radius:999px;margin-bottom:18px;background:rgba(255,209,102,.07);
+  }
+  .hl-angle-hero-kicker i{width:6px;height:6px;border-radius:50%;background:var(--hl-angle-gold);display:block}
+  h1.hl-angle-h1{
+    font-size:clamp(2.5rem,6vw,4.4rem);line-height:1.06;letter-spacing:-.02em;font-weight:900;
+    text-shadow:0 10px 40px rgba(0,0,0,.55);
+  }
+  h1.hl-angle-h1 em{font-style:normal;color:var(--hl-angle-red)}
+  .hl-angle-hero-lead{
+    margin-top:18px;color:#cdd5e1;font-size:1.02rem;max-width:640px;
+  }
+  .hl-angle-hero-lead strong{color:var(--hl-angle-gold);font-weight:600}
+  .hl-angle-hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .hl-angle-btn{
+    display:inline-flex;align-items:center;gap:8px;border-radius:10px;padding:11px 20px;
+    font-weight:700;font-size:.9rem;transition:transform .18s,box-shadow .18s,background .18s;
+    border:1px solid transparent;
+  }
+  .hl-angle-btn:hover{transform:translateY(-2px)}
+  .hl-angle-btn-primary{background:var(--hl-angle-red);color:#fff;box-shadow:0 8px 24px rgba(255,77,90,.32)}
+  .hl-angle-btn-primary:hover{box-shadow:0 12px 30px rgba(255,77,90,.42)}
+  .hl-angle-btn-ghost{border-color:rgba(255,255,255,.26);color:#e8ecf3;background:rgba(255,255,255,.04)}
+  .hl-angle-btn-ghost:hover{background:rgba(255,255,255,.1)}
+  .hl-angle-btn-gold{background:var(--hl-angle-gold);color:#2a1f05;box-shadow:0 8px 22px rgba(255,209,102,.24)}
+
+  /* ===== 通用区块 ===== */
+  .hl-angle-section{padding:64px 0;border-bottom:1px solid var(--hl-angle-line)}
+  .hl-angle-section:nth-of-type(even){background:rgba(255,255,255,.012)}
+  .hl-angle-sechead{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px;margin-bottom:30px}
+  .hl-angle-sechead h2{
+    font-size:clamp(1.45rem,2.6vw,2rem);font-weight:800;letter-spacing:-.01em;line-height:1.25;
+  }
+  .hl-angle-sechead h2 span{color:var(--hl-angle-red)}
+  .hl-angle-sechead p{color:var(--hl-angle-sub);font-size:.9rem;max-width:620px}
+  .hl-angle-sechead .hl-angle-secmeta{margin-left:auto;font-size:.78rem;color:var(--hl-angle-sub);border-left:2px solid var(--hl-angle-red);padding-left:10px}
+  .hl-angle-kicker{
+    font-size:.72rem;letter-spacing:.24em;color:var(--hl-angle-cyan);
+    text-transform:uppercase;display:block;margin-bottom:8px;font-weight:700;
+  }
+
+  /* ===== 数据条 ===== */
+  .hl-angle-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:34px}
+  .hl-angle-stat{
+    background:rgba(18,22,30,.78);border:1px solid var(--hl-angle-line);border-radius:var(--hl-angle-radius);
+    padding:18px 20px;backdrop-filter:blur(6px);
+  }
+  .hl-angle-stat b{display:block;font-size:clamp(1.35rem,2.4vw,1.85rem);font-weight:900;color:var(--hl-angle-gold);line-height:1.2}
+  .hl-angle-stat span{font-size:.8rem;color:var(--hl-angle-sub)}
+
+  /* ===== 简介 / 解析 ===== */
+  .hl-angle-about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:start}
+  .hl-angle-about-copy p{color:#c3ccda;font-size:.95rem;margin-bottom:16px}
+  .hl-angle-about-copy p strong{color:#fff}
+  .hl-angle-about-figure{position:relative;border-radius:var(--hl-angle-radius);overflow:hidden;border:1px solid var(--hl-angle-line)}
+  .hl-angle-about-figure img{aspect-ratio:4/3;object-fit:cover;width:100%}
+  .hl-angle-about-figure figcaption{
+    position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;font-size:.78rem;color:#dfe6f0;
+    background:linear-gradient(transparent,rgba(9,12,17,.92));
+  }
+  .hl-angle-feature-list{display:grid;gap:10px;margin-top:18px}
+  .hl-angle-feature-list li{
+    display:flex;gap:10px;font-size:.88rem;color:#b9c3d2;background:var(--hl-angle-panel);
+    border:1px solid var(--hl-angle-line);border-radius:10px;padding:10px 14px;
+  }
+  .hl-angle-feature-list li b{color:var(--hl-angle-cyan);flex:0 0 auto}
+
+  .hl-angle-deep{display:grid;gap:22px}
+  .hl-angle-deep-block{
+    background:var(--hl-angle-panel);border:1px solid var(--hl-angle-line);
+    border-left:3px solid var(--hl-angle-red);border-radius:0 var(--hl-angle-radius) var(--hl-angle-radius) 0;
+    padding:22px 24px;
+  }
+  .hl-angle-deep-block h3{font-size:1.08rem;margin-bottom:10px;color:#fff}
+  .hl-angle-deep-block p{font-size:.92rem;color:#b6c0d0;margin-bottom:10px}
+  .hl-angle-deep-block p:last-child{margin-bottom:0}
+  .hl-angle-deep-block p em{font-style:normal;color:var(--hl-angle-gold)}
+
+  /* ===== 焦点内容 ===== */
+  .hl-angle-focus{display:grid;grid-template-columns:1.05fr .95fr;gap:26px}
+  .hl-angle-focus-main{
+    background:var(--hl-angle-panel);border:1px solid var(--hl-angle-line);
+    border-radius:var(--hl-angle-radius);overflow:hidden;display:flex;flex-direction:column;
+  }
+  .hl-angle-focus-main .hl-angle-thumb{position:relative;overflow:hidden}
+  .hl-angle-focus-main img{aspect-ratio:16/9;object-fit:cover;width:100%;transition:transform .5s}
+  .hl-angle-focus-main:hover img{transform:scale(1.04)}
+  .hl-angle-playbadge{
+    position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;
+  }
+  .hl-angle-playbadge i{
+    width:56px;height:56px;border-radius:50%;background:rgba(255,77,90,.92);
+    display:grid;place-items:center;box-shadow:0 0 0 8px rgba(255,77,90,.18);
+  }
+  .hl-angle-playbadge i::before{
+    content:"";border-style:solid;border-width:10px 0 10px 16px;
+    border-color:transparent transparent transparent #fff;margin-left:4px;
+  }
+  .hl-angle-focus-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px}
+  .hl-angle-tags{display:flex;flex-wrap:wrap;gap:6px}
+  .hl-angle-tag{
+    font-size:.7rem;color:var(--hl-angle-cyan);background:rgba(79,209,197,.1);
+    border:1px solid rgba(79,209,197,.3);border-radius:999px;padding:1px 9px;
+  }
+  .hl-angle-tag-red{color:var(--hl-angle-red);background:var(--hl-angle-redsoft);border-color:rgba(255,77,90,.32)}
+  .hl-angle-focus-body h3{font-size:1.18rem;line-height:1.4}
+  .hl-angle-focus-body p{font-size:.87rem;color:var(--hl-angle-sub)}
+  .hl-angle-meta{display:flex;flex-wrap:wrap;gap:12px;font-size:.75rem;color:#7d8899}
+  .hl-angle-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:8px}
+  .hl-angle-mini{
+    font-size:.76rem;border:1px solid var(--hl-angle-line);border-radius:8px;
+    padding:5px 11px;color:#aab4c4;display:inline-flex;align-items:center;gap:6px;
+    transition:.18s;background:var(--hl-angle-panel2);
+  }
+  .hl-angle-mini:hover{border-color:var(--hl-angle-red);color:#fff}
+  .hl-angle-mini.is-on{border-color:var(--hl-angle-red);color:var(--hl-angle-red);background:var(--hl-angle-redsoft)}
+  .hl-angle-mini.is-fav{border-color:var(--hl-angle-gold);color:var(--hl-angle-gold);background:rgba(255,209,102,.1)}
+
+  .hl-angle-side-list{display:grid;gap:12px}
+  .hl-angle-side-item{
+    display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;
+    background:var(--hl-angle-panel);border:1px solid var(--hl-angle-line);
+    border-radius:var(--hl-angle-radius);padding:12px;transition:border-color .2s,transform .2s;
+  }
+  .hl-angle-side-item:hover{border-color:rgba(255,77,90,.5);transform:translateX(3px)}
+  .hl-angle-side-item img{width:96px;aspect-ratio:16/10;object-fit:cover;border-radius:8px}
+  .hl-angle-side-item h3{font-size:.92rem;line-height:1.4;margin-bottom:4px}
+  .hl-angle-side-item p{font-size:.76rem;color:var(--hl-angle-sub);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .hl-angle-side-item .hl-angle-meta{margin-top:6px;font-size:.7rem}
+
+  /* ===== 视频流（单列图文列表） ===== */
+  .hl-angle-videolist{display:grid;gap:14px}
+  .hl-angle-video{
+    display:grid;grid-template-columns:180px minmax(0,1fr);gap:18px;
+    background:var(--hl-angle-panel);border:1px solid var(--hl-angle-line);
+    border-radius:var(--hl-angle-radius);padding:14px;transition:border-color .2s,background .2s;
+  }
+  .hl-angle-video:hover{border-color:rgba(79,209,197,.45);background:var(--hl-angle-panel2)}
+  .hl-angle-video-fig{position:relative;border-radius:10px;overflow:hidden;align-self:start}
+  .hl-angle-video-fig img{aspect-ratio:16/9;object-fit:cover;width:100%}
+  .hl-angle-video-fig span{
+    position:absolute;right:6px;bottom:6px;background:rgba(0,0,0,.72);color:#fff;
+    font-size:.68rem;border-radius:5px;padding:1px 6px;
+  }
+  .hl-angle-video-body h3{font-size:1rem;line-height:1.4;margin-bottom:6px}
+  .hl-angle-video-body>p{font-size:.83rem;color:var(--hl-angle-sub);margin-bottom:8px}
+  .hl-angle-video-foot{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:8px}
+  .hl-angle-video-foot .hl-angle-actions{margin-top:0;padding-top:0}
+  .hl-angle-textlist{display:grid;gap:0;margin-top:18px;border-top:1px dashed var(--hl-angle-line)}
+  .hl-angle-textrow{
+    display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:14px;align-items:center;
+    padding:13px 4px;border-bottom:1px dashed var(--hl-angle-line);
+  }
+  .hl-angle-textrow:hover{background:rgba(255,255,255,.025)}
+  .hl-angle-rank{
+    font-family:ui-monospace,Menlo,monospace;font-size:.9rem;color:var(--hl-angle-red);font-weight:700;
+  }
+  .hl-angle-textrow h3{font-size:.94rem;font-weight:600;line-height:1.4}
+  .hl-angle-textrow h3 small{display:block;font-weight:400;font-size:.75rem;color:var(--hl-angle-sub);margin-top:2px}
+  .hl-angle-textrow .hl-angle-mini{white-space:nowrap}
+
+  /* ===== 专题 ===== */
+  .hl-angle-topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  .hl-angle-topic{
+    background:linear-gradient(160deg,var(--hl-angle-panel2),var(--hl-angle-panel));
+    border:1px solid var(--hl-angle-line);border-radius:var(--hl-angle-radius);padding:20px;display:flex;flex-direction:column;gap:10px;
+  }
+  .hl-angle-topic-head{display:flex;align-items:flex-start;gap:10px}
+  .hl-angle-topic-head h3{font-size:1.05rem;line-height:1.4;flex:1 1 auto}
+  .hl-angle-status{
+    flex:0 0 auto;font-size:.68rem;border-radius:999px;padding:2px 9px;
+    background:rgba(255,77,90,.14);color:var(--hl-angle-red);border:1px solid rgba(255,77,90,.32);
+  }
+  .hl-angle-status-done{background:rgba(79,209,197,.12);color:var(--hl-angle-cyan);border-color:rgba(79,209,197,.32)}
+  .hl-angle-topic>p{font-size:.84rem;color:var(--hl-angle-sub)}
+  .hl-angle-topic ul{display:grid;gap:6px;margin-top:2px}
+  .hl-angle-topic li{font-size:.82rem;color:#aeb8c8;display:flex;gap:8px}
+  .hl-angle-topic li::before{content:"▸";color:var(--hl-angle-red);flex:0 0 auto}
+  .hl-angle-topic img{aspect-ratio:16/7;object-fit:cover;border-radius:10px;margin-top:4px}
+
+  /* ===== 作者矩阵（双列简介） ===== */
+  .hl-angle-authors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .hl-angle-author{
+    display:grid;grid-template-columns:64px minmax(0,1fr);gap:14px;
+    background:var(--hl-angle-panel);border:1px solid var(--hl-angle-line);
+    border-radius:var(--hl-angle-radius);padding:16px;
+  }
+  .hl-angle-avatar{
+    width:64px;height:64px;border-radius:50%;display:grid;place-items:center;
+    font-weight:900;font-size:1.28rem;color:#0b0e13;
+  }
+  .hl-angle-author-main h3{font-size:.98rem;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .hl-angle-author-main h3 span{font-size:.68rem;font-weight:500;color:var(--hl-angle-cyan)}
+  .hl-angle-author-stats{display:flex;flex-wrap:wrap;gap:12px;font-size:.73rem;color:#7d8899;margin:5px 0 8px}
+  .hl-angle-author-stats b{color:#dfe6f0;font-weight:700}
+  .hl-angle-author-main p{font-size:.8rem;color:var(--hl-angle-sub)}
+  .hl-angle-author-main .hl-angle-mini{margin-top:10px}
+
+  /* ===== 评论（双列短评） ===== */
+  .hl-angle-comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .hl-angle-comment{
+    background:var(--hl-angle-panel);border:1px solid var(--hl-angle-line);border-radius:var(--hl-angle-radius);
+    padding:16px;display:flex;flex-direction:column;gap:8px;
+  }
+  .hl-angle-comment-top{display:flex;align-items:center;gap:10px}
+  .hl-angle-cavatar{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:.82rem;font-weight:800;color:#0b0e13;flex:0 0 auto}
+  .hl-angle-comment-top b{font-size:.86rem}
+  .hl-angle-comment-top span{font-size:.7rem;color:#6c7789;margin-left:auto}
+  .hl-angle-comment p{font-size:.85rem;color:#bcc6d5}
+  .hl-angle-comment .hl-angle-stars{color:var(--hl-angle-gold);font-size:.76rem;letter-spacing:.1em}
+
+  /* ===== 时间线 / 企业动态 ===== */
+  .hl-angle-timeline{position:relative;display:grid;gap:16px;padding-left:22px}
+  .hl-angle-timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--hl-angle-red),transparent)}
+  .hl-angle-tl-item{position:relative;background:var(--hl-angle-panel);border:1px solid var(--hl-angle-line);border-radius:10px;padding:14px 18px}
+  .hl-angle-tl-item::before{content:"";position:absolute;left:-22px;top:20px;width:9px;height:9px;border-radius:50%;background:var(--hl-angle-red);box-shadow:0 0 0 3px rgba(255,77,90,.2)}
+  .hl-angle-tl-item time{font-size:.72rem;color:var(--hl-angle-gold);letter-spacing:.06em}
+  .hl-angle-tl-item h3{font-size:.95rem;margin:4px 0 6px}
+  .hl-angle-tl-item p{font-size:.82rem;color:var(--hl-angle-sub)}
+
+  /* ===== 灵感/工具 ===== */
+  .hl-angle-inspo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  .hl-angle-inspo-card{background:var(--hl-angle-panel);border:1px solid var(--hl-angle-line);border-radius:var(--hl-angle-radius);padding:18px}
+  .hl-angle-inspo-card h3{font-size:.95rem;margin-bottom:8px;color:var(--hl-angle-gold)}
+  .hl-angle-inspo-card ul{display:grid;gap:6px}
+  .hl-angle-inspo-card li{font-size:.82rem;color:#aeb8c8}
+  .hl-angle-inspo-card li::before{content:"· ";color:var(--hl-angle-red);font-weight:900}
+
+  /* ===== 合作墙 ===== */
+  .hl-angle-partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+  .hl-angle-partner{
+    border:1px dashed var(--hl-angle-line);border-radius:12px;padding:18px 12px;text-align:center;
+    font-size:.86rem;color:#a8b3c3;background:var(--hl-angle-panel);
+  }
+  .hl-angle-partner b{display:block;font-size:1rem;color:#fff;margin-bottom:2px}
+  .hl-angle-partner small{font-size:.7rem;color:#6c7789}
+
+  /* ===== FAQ ===== */
+  .hl-angle-faq{display:grid;gap:10px;max-width:900px}
+  .hl-angle-faq details{
+    background:var(--hl-angle-panel);border:1px solid var(--hl-angle-line);border-radius:10px;
+    padding:0 16px;transition:border-color .2s;
+  }
+  .hl-angle-faq details[open]{border-color:rgba(255,77,90,.45)}
+  .hl-angle-faq summary{
+    cursor:pointer;padding:14px 0;font-size:.92rem;font-weight:600;list-style:none;
+    display:flex;align-items:center;gap:10px;
+  }
+  .hl-angle-faq summary::-webkit-details-marker{display:none}
+  .hl-angle-faq summary::before{content:"+";color:var(--hl-angle-red);font-size:1.1rem;font-weight:900}
+  .hl-angle-faq details[open] summary::before{content:"−"}
+  .hl-angle-faq details p{font-size:.85rem;color:var(--hl-angle-sub);padding:0 0 14px 24px}
+
+  /* ===== 投稿 / 联系 ===== */
+  .hl-angle-cta{
+    background:linear-gradient(120deg,rgba(255,77,90,.16),rgba(79,209,197,.08));
+    border:1px solid var(--hl-angle-line);border-radius:var(--hl-angle-radius);
+    padding:28px;display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:center;
+  }
+  .hl-angle-cta h2{font-size:clamp(1.3rem,2.2vw,1.7rem);line-height:1.3;margin-bottom:8px}
+  .hl-angle-cta p{font-size:.88rem;color:#bcc6d5}
+  .hl-angle-cta-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+  .hl-angle-contacts{display:grid;gap:6px;font-size:.8rem;color:#a9b4c4;margin-top:10px}
+
+  /* ===== 页脚 ===== */
+  .hl-angle-footer{padding:48px 0 28px;background:#080a0e;border-top:1px solid var(--hl-angle-line)}
+  .hl-angle-footgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
+  .hl-angle-footgrid h4{font-size:.85rem;color:#fff;margin-bottom:12px;letter-spacing:.06em}
+  .hl-angle-footgrid li{font-size:.8rem;color:#8b95a6;margin-bottom:7px}
+  .hl-angle-footgrid a:hover{color:var(--hl-angle-red)}
+  .hl-angle-footabout p{font-size:.8rem;color:#8b95a6;margin-top:10px;max-width:320px}
+  .hl-angle-footbottom{
+    margin-top:32px;padding-top:18px;border-top:1px solid var(--hl-angle-line);
+    display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:.75rem;color:#68727f;
+  }
+
+  /* ===== 回到顶部 ===== */
+  .hl-angle-top{
+    position:fixed;right:22px;bottom:22px;width:44px;height:44px;border-radius:50%;
+    background:var(--hl-angle-red);color:#fff;display:grid;place-items:center;z-index:80;
+    box-shadow:0 8px 22px rgba(255,77,90,.36);opacity:0;pointer-events:none;transition:.25s;font-size:1.05rem;
+  }
+  .hl-angle-top.is-show{opacity:1;pointer-events:auto}
+
+  /* ===== 弹窗 ===== */
+  .hl-angle-modal{
+    position:fixed;inset:0;z-index:120;display:none;place-items:center;padding:20px;
+    background:rgba(4,6,9,.76);backdrop-filter:blur(4px);
+  }
+  .hl-angle-modal.is-open{display:grid}
+  .hl-angle-modal-box{
+    width:min(520px,100%);background:var(--hl-angle-panel2);border:1px solid var(--hl-angle-line);
+    border-radius:16px;padding:24px;max-height:86vh;overflow:auto;box-shadow:0 30px 80px rgba(0,0,0,.6);
+  }
+  .hl-angle-modal-box h3{font-size:1.1rem;margin-bottom:10px;color:#fff}
+  .hl-angle-modal-box p{font-size:.86rem;color:var(--hl-angle-sub);margin-bottom:14px}
+  .hl-angle-modal-close{
+    float:right;width:30px;height:30px;border-radius:8px;border:1px solid var(--hl-angle-line);
+    color:var(--hl-angle-sub);display:grid;place-items:center;
+  }
+  .hl-angle-modal form{display:grid;gap:10px}
+  .hl-angle-modal label{font-size:.78rem;color:#a9b4c4}
+  .hl-angle-modal input,.hl-angle-modal textarea,.hl-angle-modal select{
+    width:100%;background:var(--hl-angle-panel);border:1px solid var(--hl-angle-line);
+    color:var(--hl-angle-text);border-radius:8px;padding:9px 12px;font-size:.86rem;outline:none;
+    font-family:inherit;
+  }
+  .hl-angle-modal input:focus,.hl-angle-modal textarea:focus,.hl-angle-modal select:focus{border-color:var(--hl-angle-red)}
+  .hl-angle-modal textarea{min-height:88px;resize:vertical}
+  .hl-angle-report-reasons{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+  .hl-angle-report-reasons .hl-angle-mini{font-size:.78rem}
+
+  /* ===== Toast ===== */
+  .hl-angle-toast{
+    position:fixed;left:50%;bottom:34px;transform:translate(-50%,16px);
+    background:#1b2230;border:1px solid var(--hl-angle-line);color:#fff;
+    padding:10px 20px;border-radius:999px;font-size:.84rem;z-index:200;
+    opacity:0;pointer-events:none;transition:.28s;box-shadow:0 12px 36px rgba(0,0,0,.5);
+  }
+  .hl-angle-toast.is-show{opacity:1;transform:translate(-50%,0)}
+
+  /* ===== 响应式 ===== */
+  @media(max-width:960px){
+    .hl-angle-nav{
+      display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;
+      background:#0d1117;border-bottom:1px solid var(--hl-angle-line);padding:10px 4vw 14px;gap:2px;
+    }
+    .hl-angle-nav.is-open{display:flex}
+    .hl-angle-headbar{flex-wrap:wrap;position:relative}
+    .hl-angle-burger{display:flex}
+    .hl-angle-search{order:3;width:100%;min-width:0}
+    .hl-angle-about-grid,.hl-angle-focus,.hl-angle-cta{grid-template-columns:minmax(0,1fr)}
+    .hl-angle-authors,.hl-angle-comments,.hl-angle-topics{grid-template-columns:minmax(0,1fr)}
+    .hl-angle-inspo{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .hl-angle-partners{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .hl-angle-footgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .hl-angle-cta-actions{justify-content:flex-start}
+  }
+  @media(max-width:640px){
+    .hl-angle-video{grid-template-columns:minmax(0,1fr)}
+    .hl-angle-video-fig img{aspect-ratio:16/9}
+    .hl-angle-inspo{grid-template-columns:minmax(0,1fr)}
+    .hl-angle-stats{grid-template-columns:minmax(0,1fr)}
+    .hl-angle-side-item{grid-template-columns:76px minmax(0,1fr)}
+    .hl-angle-side-item img{width:76px}
+    .hl-angle-textrow{grid-template-columns:26px minmax(0,1fr);gap:8px}
+    .hl-angle-textrow .hl-angle-mini{grid-column:2}
+    .hl-angle-footgrid{grid-template-columns:minmax(0,1fr)}
+    .hl-angle-hero-art{min-height:auto}
+    .hl-angle-hero-float{padding:80px 0 40px}
+  }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="hl-angle-sticky">
+  <div class="hl-angle-notice">
+    <div class="hl-angle-wrap">
+      <span class="hl-angle-notice-tag">官方发布</span>
+      <span class="hl-angle-notice-ticker">新增《海角档案·第七季》4K 修复版共 <b>12</b> 集；创作者招募通道开放；本周口碑榜更新至 <b>11 月 22 日</b>。</span>
+      <a class="hl-angle-notice-more" href="#hl-angle-news">查看更新</a>
+    </div>
+  </div>
+  <header class="hl-angle-header">
+    <div class="hl-angle-wrap hl-angle-headbar">
+      <a class="hl-angle-logo" href="#hl-angle-home">
+        <span class="hl-angle-logo-mark">海</span>
+        <span class="hl-angle-logo-text">黑料海角网<small>OFFICIAL VIDEO PORTAL</small></span>
+      </a>
+      <nav class="hl-angle-nav" id="hlAngleNav" aria-label="主导航">
+        <a href="#hl-angle-about">品牌简介</a>
+        <a href="#hl-angle-deep">深度解析</a>
+        <a href="#hl-angle-focus">焦点内容</a>
+        <a href="#hl-angle-videos">视频档案</a>
+        <a href="#hl-angle-topics">专题企划</a>
+        <a href="#hl-angle-authors">创作者</a>
+        <a href="#hl-angle-comments">口碑</a>
+        <a href="#hl-angle-faq">常见问题</a>
+      </nav>
+      <button class="hl-angle-burger" id="hlAngleBurger" aria-expanded="false" aria-controls="hlAngleNav" aria-label="展开导航">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="hl-angle-search">
+        <input type="search" id="hlAngleSearch" placeholder="搜索档案 / 创作者 / 专题" aria-label="站内搜索">
+        <button type="button" id="hlAngleSearchBtn">搜索</button>
+      </div>
+    </div>
+    <div class="hl-angle-wrap hl-angle-searchmsg" id="hlAngleSearchMsg" aria-live="polite"></div>
+  </header>
+</div>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hl-angle-hero" id="hl-angle-home">
+    <div class="hl-angle-hero-art">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23132033'/%3E%3Cstop offset='.55' stop-color='%23202c44'/%3E%3Cstop offset='1' stop-color='%23101a2a'/%3E%3C/linearGradient%3E%3CradialGradient id='g2' cx='.78' cy='.3' r='.55'%3E%3Cstop offset='0' stop-color='%23ff4d5a' stop-opacity='.55'/%3E%3Cstop offset='1' stop-color='%23ff4d5a' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='1600' height='900' fill='url(%23g1)'/%3E%3Crect width='1600' height='900' fill='url(%23g2)'/%3E%3Cg stroke='%234a5a78' stroke-opacity='.35'%3E%3Cpath d='M0 640 L280 470 L520 560 L820 380 L1100 500 L1360 360 L1600 470' fill='none' stroke-width='2'/%3E%3Cpath d='M0 720 L300 600 L600 680 L900 540 L1200 640 L1600 520' fill='none' stroke-width='1.5' stroke-dasharray='8 10'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='.06'%3E%3Ccircle cx='1250' cy='240' r='180'/%3E%3Ccircle cx='1250' cy='240' r='110'/%3E%3C/g%3E%3Cg transform='translate(1230 200)'%3E%3Ccircle r='72' fill='%23ff4d5a' fill-opacity='.9'/%3E%3Cpath d='M-16 -34 L44 0 L-16 34 Z' fill='%23fff'/%3E%3C/g%3E%3Cg fill='%23ffd166' fill-opacity='.85'%3E%3Crect x='120' y='150' width='190' height='10' rx='5'/%3E%3Crect x='120' y='182' width='120' height='8' rx='4'/%3E%3C/g%3E%3Cg fill='%234fd1c5' fill-opacity='.7'%3E%3Crect x='980' y='760' width='420' height='3'/%3E%3Crect x='980' y='776' width='300' height='2'/%3E%3C/g%3E%3C/svg%3E" alt="黑料海角网官方首屏主视觉:深蓝档案影像风格的播放标识与城市轮廓线" width="1600" height="900">
+      <div class="hl-angle-wrap hl-angle-hero-float">
+        <span class="hl-angle-hero-kicker"><i></i>官方网站 · 企业级影像档案平台</span>
+        <h1 class="hl-angle-h1">黑料海角网<em>·</em>真实影像档案</h1>
+        <p class="hl-angle-hero-lead">作为深耕深度影像与真实记录领域的<strong>品牌平台</strong>，我们以<strong>原创、正版、高清</strong>为底线，为创作者与企业搭建值得信赖的内容生态。</p>
+        <div class="hl-angle-hero-btns">
+          <a class="hl-angle-btn hl-angle-btn-primary" href="#hl-angle-videos">进入视频档案</a>
+          <a class="hl-angle-btn hl-angle-btn-ghost" href="#hl-angle-topics">浏览专题企划</a>
+          <a class="hl-angle-btn hl-angle-btn-gold" href="#hl-angle-submit" id="hlAngleHeroSubmit">创作者投稿</a>
+        </div>
+        <div class="hl-angle-stats">
+          <div class="hl-angle-stat"><b>4,860</b><span>已上线高清原创视频</span></div>
+          <div class="hl-angle-stat"><b>327</b><span>签约与入驻创作者</span></div>
+          <div class="hl-angle-stat"><b>1.42 亿</b><span>累计播放与收藏</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌简介 -->
+  <section class="hl-angle-section" id="hl-angle-about">
+    <div class="hl-angle-wrap">
+      <div class="hl-angle-sechead">
+        <div>
+          <span class="hl-angle-kicker">Brand Profile</span>
+          <h2>关于<span>黑料海角网</span>官方网站</h2>
+        </div>
+        <p class="hl-angle-secmeta">企业简介 · 品牌定位 · 运营准则</p>
+      </div>
+      <div class="hl-angle-about-grid">
+        <div class="hl-angle-about-copy">
+          <p><strong>黑料海角网</strong>是一家以深度影像档案为核心的企业级视频品牌，官方网站面向公众提供原创、高清、可检索的视频内容。平台以“记录真实、拆解细节、保留现场”为方法论，围绕人物、事件、城市与技艺四条线索持续运营，形成覆盖视频、图文与社区讨论的内容生态。</p>
+          <p>作为垂直领域的长期主义者，我们坚持正版授权与专业制作流程：每一支上线的黑料海角网视频都经过素材核验、字幕校对与画质修复三道工序，并由内容委员会定期复核。平台既服务希望了解完整脉络的观众，也服务需要可信素材与创作支持的创作者与企业伙伴。</p>
+          <p>我们相信，品质来自流程，口碑来自时间。黑料海角网以用户至上为准则，持续升级创作者工具、社区规则与版权保护机制，让真实的内容被看见，让认真的人获得回报。</p>
+          <ul class="hl-angle-feature-list">
+            <li><b>原创</b>自建采编与后期团队，视频版权归属清晰可查。</li>
+            <li><b>高清</b>重点档案统一提供 4K 修复版本，支持多端流畅播放。</li>
+            <li><b>社区</b>创作者、观众与审核团队共建公开透明的讨论环境。</li>
+            <li><b>持续</b>每周固定更新，企业动态与更新日志对外公示。</li>
+          </ul>
+        </div>
+        <figure class="hl-angle-about-figure">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='a1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231b2433'/%3E%3Cstop offset='1' stop-color='%230e1420'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23a1)'/%3E%3Cg stroke='%233c4a64' stroke-width='1.5' fill='none'%3E%3Crect x='70' y='90' width='300' height='190' rx='10'/%3E%3Crect x='400' y='90' width='330' height='90' rx='10'/%3E%3Crect x='400' y='200' width='330' height='80' rx='10'/%3E%3Crect x='70' y='310' width='660' height='2'/%3E%3Crect x='70' y='360' width='430' height='150' rx='10'/%3E%3Crect x='520' y='360' width='210' height='150' rx='10'/%3E%3C/g%3E%3Cg fill='%23ff4d5a'%3E%3Ccircle cx='120' cy='140' r='12'/%3E%3Crect x='100' y='180' width='200' height='8' rx='4' fill='%23ff4d5a' fill-opacity='.5'/%3E%3Crect x='100' y='202' width='140' height='6' rx='3' fill='%234fd1c5' fill-opacity='.6'/%3E%3C/g%3E%3Cg fill='%23ffd166' fill-opacity='.8'%3E%3Crect x='430' y='120' width='180' height='9' rx='4'/%3E%3Crect x='430' y='145' width='110' height='6' rx='3'/%3E%3Crect x='430' y='228' width='220' height='7' rx='3'/%3E%3C/g%3E%3Cg stroke='%234fd1c5' stroke-opacity='.55' fill='none' stroke-width='2'%3E%3Cpath d='M90 470 L160 410 L230 445 L300 390 L370 430 L450 380'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='.1'%3E%3Ccircle cx='650' cy='500' r='60'/%3E%3C/g%3E%3C/svg%3E" alt="黑料海角网内容中台界面示意图:档案卡片、数据面板与播放曲线" width="800" height="600" loading="lazy">
+          <figcaption>内容中台：档案卡片 / 素材核验 / 播放曲线一屏可视</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 深度解析（800+字） -->
+  <section class="hl-angle-section" id="hl-angle-deep">
+    <div class="hl-angle-wrap">
+      <div class="hl-angle-sechead">
+        <div>
+          <span class="hl-angle-kicker">Deep Read</span>
+          <h2>关键词解析：<span>黑料海角网</span>在做什么</h2>
+        </div>
+        <p class="hl-angle-secmeta">深度解析 · 不少于 800 字</p>
+      </div>
+      <div class="hl-angle-deep">
+        <div class="hl-angle-deep-block">
+          <h3>一、从名字到方法论：为什么是“档案”而不是“爆料”</h3>
+          <p>很多人第一次看到“黑料海角网”这五个字，会本能地把它理解成一个追逐猎奇的站点。但从官方网站的定位来看，这个名字承载的恰恰是相反的方向：<em>“黑料”指向未经修饰的原始素材</em>，包括被剪辑掉的现场、被忽略的证词、被时间覆盖的细节；“海角”则指向边缘视角——那些不在聚光灯正中央、却真实发生的人与事。两者相加，形成的是一套记录方法论，而不是情绪化的标题流水线。</p>
+          <p>因此，黑料海角网官方网站上的每一支视频，都要回答三个问题：素材从哪来，镜头为什么这样剪，结论的边界在哪里。观众在视频页可以看到素材来源说明、剪辑思路与校对记录，这一点在同类视频品牌中并不常见。我们愿意把创作过程也变成内容的一部分，因为只有过程透明，真实才站得住。</p>
+          <p>这也解释了平台的结构：焦点内容负责呈现完整叙事，视频档案负责长期积累，专题企划负责把零散记录组织成可阅读的脉络，创作者矩阵负责保证素材的多元来源。四者互相咬合，才构成一个持续运营的内容生态，而不是一次性的话题收割。</p>
+        </div>
+        <div class="hl-angle-deep-block">
+          <h3>二、真实影像的四个生产线：采、核、修、审</h3>
+          <p>黑料海角网的视频生产分为四道工序。<em>采</em>：由签约创作者与自建采编组共同完成，强调第一现场与可回溯的联系记录；<em>核</em>：对人物身份、时间线、地点信息进行交叉核对，涉及第三方素材时必须取得授权或明确标注合理使用范围；<em>修</em>：画质修复、声音降噪、字幕校对，重点档案提供 4K 版本；<em>审</em>：内容委员会每周例会复核争议内容，必要时补充说明或下架。</p>
+          <p>四道工序让“黑料海角网”这个关键词有了具体所指：它是流程，也是承诺。观众看到的不是被情绪推着走的片段，而是带时间戳、带来源、带说明的影像档案。创作者在这里获得的也不是一次性流量，而是可沉淀的作品集与署名权。</p>
+          <p>我们同样看重反向反馈。每支视频下方都保留“补充线索”入口，观众可以提交新的材料或指出错误。被采纳的线索会进入下一版修复，并在企业动态中公示。这种双向机制，是黑料海角网把社区纳入生产环节的关键设计。</p>
+        </div>
+        <div class="hl-angle-deep-block">
+          <h3>三、创作者生态：让认真的人被看见</h3>
+          <p>一个视频品牌能否持续，取决于创作者是否愿意长期留下。黑料海角网官方网站为创作者提供三件事：稳定的分成与结算周期、可迁移的作品主页、以及透明的成长路径。新人从“观察员”起步，完成实名与素材规范培训后成为“记录者”，作品累计达到标准后可申请“档案作者”，获得专题联合署名与线下拍摄支持。</p>
+          <p>平台不鼓励用夸张标题换播放。相反，我们设置了口碑权重：收藏率、完播率与线索采纳率共同决定推荐位，短期爆量但低质量的条目会被降权。这套规则运行以来，黑料海角网的复访率与创作者留存率稳步提升，也吸引了纪录片团队、城市研究者与手艺人加入。</p>
+          <p>对品牌合作方，我们提供清晰的合作边界：可冠名专题、可共建档案库、可申请企业影像定制，但不得干预内容结论。这条写在合作准则第一条，也是黑料海角网能被称为值得信赖平台的原因。</p>
+        </div>
+        <div class="hl-angle-deep-block">
+          <h3>四、社区与责任：热度之外，还有尺度</h3>
+          <p>真实影像天然带有敏感性。黑料海角网在社区治理上采取“先保护、后公开”的原则：涉及未成年人、隐私信息与正在进行的司法程序的内容，一律做脱敏或延后处理；对当事人提出异议的条目，启动快速复核通道。我们把这套规则公开在常见问题中，任何人都可以查阅。</p>
+          <p>同时，平台承担相应的社会责任：每年开放一定比例的公益档案名额，支持乡村记录、非遗手艺与城市口述史项目；为学校与公益机构提供教育授权；定期发布内容透明度报告。这些动作不会带来即时热度，但它们构成了黑料海角网品牌故事里最扎实的部分。</p>
+          <p>回到关键词本身：黑料海角网不是一句口号，而是一套关于如何记录、如何核对、如何共处的长期实践。它需要创作者、观众与企业共同参与，也需要时间检验。我们愿意把这条路径走慢一点，走稳一点。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 + 视频档案 -->
+  <section class="hl-angle-section" id="hl-angle-focus">
+    <div class="hl-angle-wrap">
+      <div class="hl-angle-sechead">
+        <div>
+          <span class="hl-angle-kicker">Focus</span>
+          <h2>焦点内容 · <span>黑料海角网</span>本周主推</h2>
+        </div>
+        <p class="hl-angle-secmeta">一幅重点大图 + 文字列表</p>
+      </div>
+      <div class="hl-angle-focus">
+        <article class="hl-angle-focus-main">
+          <div class="hl-angle-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 540'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23241218'/%3E%3Cstop offset='.6' stop-color='%23161f2e'/%3E%3Cstop offset='1' stop-color='%230d131c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='960' height='540' fill='url(%23f1)'/%3E%3Cg fill='%23ff4d5a' fill-opacity='.18'%3E%3Ccircle cx='760' cy='150' r='190'/%3E%3C/g%3E%3Cg stroke='%23ffd166' stroke-opacity='.6' fill='none' stroke-width='2'%3E%3Cpath d='M80 430 L200 360 L320 400 L440 300 L560 350 L680 260 L800 320 L900 250'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='.08'%3E%3Crect x='80' y='90' width='260' height='150' rx='12'/%3E%3C/g%3E%3Cg fill='%234fd1c5' fill-opacity='.85'%3E%3Crect x='104' y='116' width='150' height='9' rx='4'/%3E%3Crect x='104' y='142' width='90' height='6' rx='3'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='.12'%3E%3Crect x='520' y='400' width='360' height='80' rx='10'/%3E%3C/g%3E%3Cg fill='%23ff4d5a'%3E%3Crect x='544' y='424' width='180' height='8' rx='4'/%3E%3C/g%3E%3C/svg%3E" alt="焦点视频海角档案第七季封面:夜色中的记录曲线与播放标识" width="960" height="540">
+            <span class="hl-angle-playbadge"><i></i></span>
+          </div>
+          <div class="hl-angle-focus-body">
+            <div class="hl-angle-tags">
+              <span class="hl-angle-tag hl-angle-tag-red">本周主推</span>
+              <span class="hl-angle-tag">深度档案</span>
+              <span class="hl-angle-tag">4K 修复</span>
+            </div>
+            <h3>《海角档案·第七季》第一集：被折叠的十七分钟</h3>
+            <p>围绕一段尘封的现场记录展开，用三条独立时间线交叉比对，还原事件前后的完整脉络。附剪辑思路说明与素材来源清单。</p>
+            <div class="hl-angle-meta"><span>创作者：岸边观察者</span><span>播放 128.6 万</span><span>点赞 3.4 万</span><span>收藏 1.9 万</span></div>
+            <div class="hl-angle-actions">
+              <button class="hl-angle-mini" data-hl-like>♡ 点赞 <span>34012</span></button>
+              <button class="hl-angle-mini" data-hl-fav>☆ 收藏</button>
+              <button class="hl-angle-mini" data-hl-share>↗ 分享</button>
+              <button class="hl-angle-mini" data-hl-report>⚑ 反馈</button>
+            </div>
+          </div>
+        </article>
+        <div class="hl-angle-side-list">
+          <article class="hl-angle-side-item">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23151d29'/%3E%3Cg stroke='%234fd1c5' stroke-opacity='.7' fill='none' stroke-width='2'%3E%3Cpath d='M20 160 L80 110 L140 135 L200 80 L260 110 L300 70'/%3E%3C/g%3E%3Cg fill='%23ff4d5a' fill-opacity='.85'%3E%3Ccircle cx='200' cy='80' r='7'/%3E%3C/g%3E%3Cg fill='%23ffd166' fill-opacity='.8'%3E%3Crect x='20' y='30' width='120' height='7' rx='3'/%3E%3Crect x='20' y='48' width='70' height='5' rx='2'/%3E%3C/g%3E%3C/svg%3E" alt="城市夜行记录视频缩略图:夜色中的行人与轨迹曲线" width="320" height="200" loading="lazy">
+            <div>
+              <h3>城市夜行：凌晨三点的搬运工</h3>
+              <p>跟拍三位夜间劳动者，记录一份少被看见的作息表。</p>
+              <div class="hl-angle-meta"><span>播放 42.3 万</span><span>点赞 8,210</span></div>
+            </div>
+          </article>
+          <article class="hl-angle-side-item">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23201816'/%3E%3Cg fill='%23ff4d5a' fill-opacity='.75'%3E%3Crect x='30' y='120' width='26' height='50' rx='4'/%3E%3Crect x='70' y='90' width='26' height='80' rx='4'/%3E%3Crect x='110' y='60' width='26' height='110' rx='4'/%3E%3C/g%3E%3Cg fill='%23ffd166' fill-opacity='.9'%3E%3Ccircle cx='250' cy='70' r='22'/%3E%3C/g%3E%3Cg fill='%234fd1c5' fill-opacity='.7'%3E%3Crect x='180' y='40' width='100' height='6' rx='3'/%3E%3Crect x='180' y='56' width='60' height='5' rx='2'/%3E%3C/g%3E%3C/svg%3E" alt="数据里的街区视频缩略图:柱状图与圆形指标图形" width="320" height="200" loading="lazy">
+            <div>
+              <h3>数据里的街区：一条街的十年价格表</h3>
+              <p>用十年公开数据复原街区变迁，附采访与图表。</p>
+              <div class="hl-angle-meta"><span>播放 36.8 万</span><span>点赞 6,940</span></div>
+            </div>
+          </article>
+          <article class="hl-angle-side-item">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23141f1c'/%3E%3Cg stroke='%23ffd166' stroke-opacity='.6' fill='none' stroke-width='2'%3E%3Ccircle cx='160' cy='100' r='60'/%3E%3Ccircle cx='160' cy='100' r='36'/%3E%3C/g%3E%3Cg fill='%234fd1c5' fill-opacity='.85'%3E%3Ccircle cx='160' cy='100' r='9'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='.1'%3E%3Crect x='20' y='150' width='110' height='8' rx='4'/%3E%3C/g%3E%3C/svg%3E" alt="证词与镜头视频缩略图:同心圆与波形示意图" width="320" height="200" loading="lazy">
+            <div>
+              <h3>证词与镜头：一次三方核对的完整过程</h3>
+              <p>把核对流程做成可视化，展示证据如何被逐条确认。</p>
+              <div class="hl-angle-meta"><span>播放 29.1 万</span><span>点赞 5,530</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hl-angle-section" id="hl-angle-videos">
+    <div class="hl-angle-wrap">
+      <div class="hl-angle-sechead">
+        <div>
+          <span class="hl-angle-kicker">Video Archive</span>
+          <h2><span>黑料海角网</span>视频档案 · 单列图文列表</h2>
+        </div>
+        <p class="hl-angle-secmeta">重点条目配封面，其余为文字索引</p>
+      </div>
+      <div class="hl-angle-videolist">
+        <article class="hl-angle-video">
+          <div class="hl-angle-video-fig">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%2318202c'/%3E%3Cg stroke='%23ff4d5a' stroke-opacity='.6' fill='none' stroke-width='2'%3E%3Cpath d='M30 220 L120 170 L210 195 L300 130 L390 160 L450 110'/%3E%3C/g%3E%3Cg fill='%23ffd166' fill-opacity='.85'%3E%3Crect x='30' y='40' width='150' height='8' rx='4'/%3E%3Crect x='30' y='60' width='90' height='6' rx='3'/%3E%3C/g%3E%3Cg fill='%234fd1c5' fill-opacity='.5'%3E%3Crect x='300' y='200' width='150' height='6' rx='3'/%3E%3C/g%3E%3C/svg%3E" alt="海角档案第六季回顾封面:折线与时间标记图形" width="480" height="270" loading="lazy">
+            <span>18:42</span>
+          </div>
+          <div class="hl-angle-video-body">
+            <div class="hl-angle-tags"><span class="hl-angle-tag">档案回顾</span><span class="hl-angle-tag hl-angle-tag-red">编辑推荐</span></div>
+            <h3>《海角档案》第六季全回顾：五个被追问的现场</h3>
+            <p>把一季中最受关注的五段记录重新梳理，补充当时的遗漏信息与后续进展，是一次面向社区的公开复盘。</p>
+            <div class="hl-angle-meta"><span>作者：档案组</span><span>播放 96.4 万</span><span>点赞 2.1 万</span><span>收藏 8,900</span></div>
+            <div class="hl-angle-video-foot">
+              <div class="hl-angle-actions">
+                <button class="hl-angle-mini" data-hl-like>♡ 点赞 <span>21306</span></button>
+                <button class="hl-angle-mini" data-hl-fav>☆ 收藏</button>
+                <button class="hl-angle-mini" data-hl-share>↗ 分享</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="hl-angle-video">
+          <div class="hl-angle-video-fig">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23231a1c'/%3E%3Cg fill='%23ff4d5a' fill-opacity='.7'%3E%3Crect x='40' y='170' width='40' height='60' rx='5'/%3E%3Crect x='100' y='140' width='40' height='90' rx='5'/%3E%3Crect x='160' y='110' width='40' height='120' rx='5'/%3E%3C/g%3E%3Cg fill='%23ffd166' fill-opacity='.75'%3E%3Crect x='280' y='50' width='160' height='9' rx='4'/%3E%3Crect x='280' y='72' width='100' height='7' rx='3'/%3E%3C/g%3E%3Cg stroke='%234fd1c5' stroke-opacity='.6' fill='none' stroke-width='2'%3E%3Ccircle cx='360' cy='170' r='50'/%3E%3C/g%3E%3C/svg%3E" alt="手艺人第三期封面:工作台与工具柱状图形" width="480" height="270" loading="lazy">
+            <span>12:05</span>
+          </div>
+          <div class="hl-angle-video-body">
+            <div class="hl-angle-tags"><span class="hl-angle-tag">人物访谈</span><span class="hl-angle-tag">匠心</span></div>
+            <h3>手艺人第三期：一把旧凿子传了四代人</h3>
+            <p>从工具磨损的痕迹谈起，讲述一个木工家族的选择与坚持，镜头保留了打磨时的全部环境音。</p>
+            <div class="hl-angle-meta"><span>作者：木与石</span><span>播放 54.7 万</span><span>点赞 1.3 万</span><span>收藏 6,120</span></div>
+            <div class="hl-angle-video-foot">
+              <div class="hl-angle-actions">
+                <button class="hl-angle-mini" data-hl-like>♡ 点赞 <span>13087</span></button>
+                <button class="hl-angle-mini" data-hl-fav>☆ 收藏</button>
+                <button class="hl-angle-mini" data-hl-share>↗ 分享</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="hl-angle-video">
+          <div class="hl-angle-video-fig">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23132028'/%3E%3Cg stroke='%23ffd166' stroke-opacity='.55' fill='none' stroke-width='2'%3E%3Cpath d='M0 200 Q120 120 240 180 T480 140'/%3E%3C/g%3E%3Cg fill='%234fd1c5' fill-opacity='.8'%3E%3Ccircle cx='240' cy='180' r='8'/%3E%3C/g%3E%3Cg fill='%23ff4d5a' fill-opacity='.8'%3E%3Crect x='40' y='40' width='120' height='8' rx='4'/%3E%3Crect x='40' y='62' width='70' height='6' rx='3'/%3E%3C/g%3E%3C/svg%3E" alt="城市口述史封面:潮汐曲线与原点标识" width="480" height="270" loading="lazy">
+            <span>24:16</span>
+          </div>
+          <div class="hl-angle-video-body">
+            <div class="hl-angle-tags"><span class="hl-angle-tag">城市探索</span><span class="hl-angle-tag">在地文化</span></div>
+            <h3>城市口述史：码头边最后一批老船工</h3>
+            <p>六位平均年龄七十三岁的船工讲述潮汐与绳索的记忆，影片采用同期声与手绘地图交替呈现。</p>
+            <div class="hl-angle-meta"><span>作者：海风录</span><span>播放 61.9 万</span><span>点赞 1.6 万</span><span>收藏 7,460</span></div>
+            <div class="hl-angle-video-foot">
+              <div class="hl-angle-actions">
+                <button class="hl-angle-mini" data-hl-like>♡ 点赞 <span>16422</span></button>
+                <button class="hl-angle-mini" data-hl-fav>☆ 收藏</button>
+                <button class="hl-angle-mini" data-hl-share>↗ 分享</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="hl-angle-textlist">
+        <div class="hl-angle-textrow">
+          <span class="hl-angle-rank">04</span>
+          <h3>修复日志：怎样把一段 1998 年的磁带还原到 4K<small>技术拆解 · 档案组</small></h3>
+          <button class="hl-angle-mini" data-hl-share>↗ 分享</button>
+        </div>
+        <div class="hl-angle-textrow">
+          <span class="hl-angle-rank">05</span>
+          <h3>被忽略的一封信：档案补充说明第 12 号<small>线索追踪 · 岸边观察者</small></h3>
+          <button class="hl-angle-mini" data-hl-share>↗ 分享</button>
+        </div>
+        <div class="hl-angle-textrow">
+          <span class="hl-angle-rank">06</span>
+          <h3>镜头外的十分钟：采访对象如何审阅成片<small>创作幕后 · 木与石</small></h3>
+          <button class="hl-angle-mini" data-hl-share>↗ 分享</button>
+        </div>
+        <div class="hl-angle-textrow">
+          <span class="hl-angle-rank">07</span>
+          <h3>旧市场搬迁三年后：摊主的账本与选择<small>深度测评 · 街区调查组</small></h3>
+          <button class="hl-angle-mini" data-hl-share>↗ 分享</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="hl-angle-section" id="hl-angle-topics">
+    <div class="hl-angle-wrap">
+      <div class="hl-angle-sechead">
+        <div>
+          <span class="hl-angle-kicker">Series</span>
+          <h2>专题企划 · <span>黑料海角网</span>长期企划</h2>
+        </div>
+        <p class="hl-angle-secmeta">更新状态 · 内容条目</p>
+      </div>
+      <div class="hl-angle-topics">
+        <article class="hl-angle-topic">
+          <div class="hl-angle-topic-head">
+            <h3>专题一：《海岸线三百公里》</h3>
+            <span class="hl-angle-status">更新中</span>
+          </div>
+          <p>沿三百公里海岸线逐段记录渔村、港口与湿地，用影像保存正在改变的生活方式。</p>
+          <ul>
+            <li>第 1 集：潮汐时间表上的三个村庄</li>
+            <li>第 2 集：休渔期里的修补手艺</li>
+            <li>第 3 集：湿地边的观测笔记</li>
+          </ul>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 315'%3E%3Crect width='720' height='315' fill='%23131f2b'/%3E%3Cg stroke='%234fd1c5' stroke-opacity='.65' fill='none' stroke-width='2'%3E%3Cpath d='M0 210 Q120 170 240 205 T480 190 T720 215'/%3E%3Cpath d='M0 250 Q140 215 280 245 T560 230 T720 255' stroke-opacity='.4'/%3E%3C/g%3E%3Cg fill='%23ffd166' fill-opacity='.85'%3E%3Ccircle cx='590' cy='80' r='26'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='.1'%3E%3Crect x='40' y='50' width='180' height='12' rx='6'/%3E%3C/g%3E%3C/svg%3E" alt="海岸线三百公里专题配图:海浪曲线与落日圆形" width="720" height="315" loading="lazy">
+        </article>
+        <article class="hl-angle-topic">
+          <div class="hl-angle-topic-head">
+            <h3>专题二：《证言练习册》</h3>
+            <span class="hl-angle-status hl-angle-status-done">已完结</span>
+          </div>
+          <p>把采访中的核对方法整理成可学习的练习册，配合案例演示，供创作者与内容团队参考。</p>
+          <ul>
+            <li>第一节：如何记录时间与地点</li>
+            <li>第二节：三段证词互相矛盾的解法</li>
+            <li>第三节：脱敏处理与当事人知情</li>
+          </ul>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 315'%3E%3Crect width='720' height='315' fill='%23201c25'/%3E%3Cg stroke='%23ff4d5a' stroke-opacity='.55' fill='none' stroke-width='2'%3E%3Crect x='70' y='60' width='220' height='180' rx='12'/%3E%3Crect x='340' y='60' width='310' height='80' rx='12'/%3E%3Crect x='340' y='160' width='310' height='80' rx='12'/%3E%3C/g%3E%3Cg fill='%23ffd166' fill-opacity='.85'%3E%3Ccircle cx='140' cy='110' r='14'/%3E%3C/g%3E%3Cg fill='%234fd1c5' fill-opacity='.6'%3E%3Crect x='110' y='150' width='140' height='8' rx='4'/%3E%3C/g%3E%3C/svg%3E" alt="证言练习册专题配图:卡片与核对步骤图形" width="720" height="315" loading="lazy">
+        </article>
+        <article class="hl-angle-topic">
+          <div class="hl-angle-topic-head">
+            <h3>专题三：《旧物新生》</h3>
+            <span class="hl-angle-status">更新中</span>
+          </div>
+          <p>走访二手市场与修理铺，记录被重新使用的物件和它们背后的手艺人。</p>
+          <ul>
+            <li>第 1 集：一台收音机的第三次寿命</li>
+            <li>第 2 集：修表铺里的显微镜</li>
+            <li>第 3 集：旧书修复的十二道工序</li>
+          </ul>
+        </article>
+        <article class="hl-angle-topic">
+          <div class="hl-angle-topic-head">
+            <h3>专题四：《深夜工作间》</h3>
+            <span class="hl-angle-status">筹备中</span>
+          </div>
+          <p>聚焦夜间工作者，用长镜头与自然声展示另一种作息节律，预计十二月开放投稿。</p>
+          <ul>
+            <li>第 1 集：面包房的第一炉</li>
+            <li>第 2 集：夜班调度员的屏幕</li>
+            <li>第 3 集：凌晨的清洁班组</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="hl-angle-section" id="hl-angle-authors">
+    <div class="hl-angle-wrap">
+      <div class="hl-angle-sechead">
+        <div>
+          <span class="hl-angle-kicker">Creators</span>
+          <h2><span>黑料海角网</span>创作者矩阵</h2>
+        </div>
+        <p class="hl-angle-secmeta">双列简介 · 4 位档案作者</p>
+      </div>
+      <div class="hl-angle-authors">
+        <article class="hl-angle-author">
+          <div class="hl-angle-avatar" style="background:linear-gradient(140deg,#ff4d5a,#ffd166)" aria-hidden="true">岸</div>
+          <div class="hl-angle-author-main">
+            <h3>岸边观察者 <span>档案作者</span></h3>
+            <div class="hl-angle-author-stats"><span>作品 <b>86</b></span><span>粉丝 <b>24.7 万</b></span><span>领域：深度档案</span></div>
+            <p>长期跟踪公共事件的时间线，擅长把零散素材整理成可核对的记录。做片前习惯先画一张完整的信息关系图，再把镜头按证据顺序排布，作品以冷静、少结论、多细节著称。</p>
+            <button class="hl-angle-mini" data-hl-author="岸边观察者">查看作者档案</button>
+          </div>
+        </article>
+        <article class="hl-angle-author">
+          <div class="hl-angle-avatar" style="background:linear-gradient(140deg,#4fd1c5,#2c7a8c)" aria-hidden="true">木</div>
+          <div class="hl-angle-author-main">
+            <h3>木与石 <span>特邀记录者</span></h3>
+            <div class="hl-angle-author-stats"><span>作品 <b>54</b></span><span>粉丝 <b>17.2 万</b></span><span>领域：匠心手艺</span></div>
+            <p>专注手艺人与旧物题材，拍摄周期通常以月计。喜欢在工坊里等一个动作重复几十遍之后再开机，认为手的节奏比脚本更可靠，画面偏爱自然光与未经修饰的环境声。</p>
+            <button class="hl-angle-mini" data-hl-author="木与石">查看作者档案</button>
+          </div>
+        </article>
+        <article class="hl-angle-author">
+          <div class="hl-angle-avatar" style="background:linear-gradient(140deg,#ffd166,#c98b1c)" aria-hidden="true">海</div>
+          <div class="hl-angle-author-main">
+            <h3>海风录 <span>城市记录者</span></h3>
+            <div class="hl-angle-author-stats"><span>作品 <b>71</b></span><span>粉丝 <b>19.8 万</b></span><span>领域：城市探索</span></div>
+            <p>以城市口述史为主线，走访码头、车站与老街区，习惯用手绘地图串联受访者记忆。相信城市的真实藏在小店关门的时间表里，作品常配可下载的路线与资料索引。</p>
+            <button class="hl-angle-mini" data-hl-author="海风录">查看作者档案</button>
+          </div>
+        </article>
+        <article class="hl-angle-author">
+          <div class="hl-angle-avatar" style="background:linear-gradient(140deg,#a78bfa,#4f46e5)" aria-hidden="true">街</div>
+          <div class="hl-angle-author-main">
+            <h3>街区调查组 <span>团队账号</span></h3>
+            <div class="hl-angle-author-stats"><span>作品 <b>39</b></span><span>粉丝 <b>12.4 万</b></span><span>领域：数据与民生</span></div>
+            <p>由三名研究者与两名剪辑师组成，擅长把公开数据与实地采访对照呈现。每个选题先做数据预判，再进现场验证，视频中提供的图表与原始数据表均可在作者主页下载。</p>
+            <button class="hl-angle-mini" data-hl-author="街区调查组">查看作者档案</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 + 时间线 -->
+  <section class="hl-angle-section" id="hl-angle-news">
+    <div class="hl-angle-wrap">
+      <div class="hl-angle-sechead">
+        <div>
+          <span class="hl-angle-kicker">Newsroom</span>
+          <h2>企业动态 · <span>官方发布</span>与更新日志</h2>
+        </div>
+        <p class="hl-angle-secmeta">品牌资讯 · 时间线</p>
+      </div>
+      <div class="hl-angle-timeline">
+        <div class="hl-angle-tl-item">
+          <time datetime="2026-11-22">2026-11-22</time>
+          <h3>《海角档案·第七季》4K 修复版上线</h3>
+          <p>共 12 集，新增素材来源清单与剪辑说明页；同时上线导演评论音轨，可在视频页切换。</p>
+        </div>
+        <div class="hl-angle-tl-item">
+          <time datetime="2026-11-15">2026-11-15</time>
+          <h3>创作者成长计划第二期开放报名</h3>
+          <p>面向纪实、手工艺与城市研究方向，提供拍摄支持与结算保障，报名截止十二月十日。</p>
+        </div>
+        <div class="hl-angle-tl-item">
+          <time datetime="2026-11-06">2026-11-06</time>
+          <h3>内容透明度报告（第三季度）发布</h3>
+          <p>披露争议内容复核数量、线索采纳率与版权投诉处理时长，报告可在常见问题区查阅。</p>
+        </div>
+        <div class="hl-angle-tl-item">
+          <time datetime="2026-10-28">2026-10-28</time>
+          <h3>社区规则更新：细化当事人异议通道</h3>
+          <p>新增快速复核流程与结果公示页，缩短反馈处理时间，并明确脱敏处理标准。</p>
+        </div>
+      </div>
+      <div class="hl-angle-inspo">
+        <div class="hl-angle-inspo-card">
+          <h3>创作灵感</h3>
+          <ul>
+            <li>从一张老照片的三处细节写脚本</li>
+            <li>用环境声做开场，替代旁白解释</li>
+            <li>把时间线画成可读的图形</li>
+          </ul>
+        </div>
+        <div class="hl-angle-inspo-card">
+          <h3>剪辑思路</h3>
+          <ul>
+            <li>先排证据顺序，再考虑情绪铺垫</li>
+            <li>保留一次沉默，观众需要呼吸</li>
+            <li>字幕只补充画面里没有的信息</li>
+          </ul>
+        </div>
+        <div class="hl-angle-inspo-card">
+          <h3>标题建议</h3>
+          <ul>
+            <li>用核心疑问代替结论式标题</li>
+            <li>标注时间与地点，提升可信度</li>
+            <li>避免情绪化形容词堆叠</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 评论 -->
+  <section class="hl-angle-section" id="hl-angle-comments">
+    <div class="hl-angle-wrap">
+      <div class="hl-angle-sechead">
+        <div>
+          <span class="hl-angle-kicker">Community</span>
+          <h2>用户口碑 · <span>黑料海角网</span>社区短评</h2>
+        </div>
+        <p class="hl-angle-secmeta">双列短评 · 6 条</p>
+      </div>
+      <div class="hl-angle-comments">
+        <div class="hl-angle-comment">
+          <div class="hl-angle-comment-top"><span class="hl-angle-cavatar" style="background:#ffd166">陈</span><b>陈记笔记</b><span>2 小时前</span></div>
+          <p class="hl-angle-stars">★★★★★</p>
+          <p>最打动我的是每条视频下面附的来源清单，第一次看到有平台愿意把核对过程公开，看完会想继续翻下一集。</p>
+        </div>
+        <div class="hl-angle-comment">
+          <div class="hl-angle-comment-top"><span class="hl-angle-cavatar" style="background:#4fd1c5">阿</span><b>阿舟在码头</b><span>5 小时前</span></div>
+          <p class="hl-angle-stars">★★★★☆</p>
+          <p>口述史那期听哭了，同期声保留得非常好。唯一希望增加多语言字幕，方便分享给朋友。</p>
+        </div>
+        <div class="hl-angle-comment">
+          <div class="hl-angle-comment-top"><span class="hl-angle-cavatar" style="background:#a78bfa">周</span><b>周末剪辑室</b><span>昨天</span></div>
+          <p>作为同行，很认可这里的剪辑说明页。不是炫技，是把判断标准写出来，值得学习。</p>
+        </div>
+        <div class="hl-angle-comment">
+          <div class="hl-angle-comment-top"><span class="hl-angle-cavatar" style="background:#ff4d5a">林</span><b>林间慢读</b><span>昨天</span></div>
+          <p class="hl-angle-stars">★★★★★</p>
+          <p>更新很稳定，每周都有新东西看。收藏夹已经放满，希望早日支持自定义合集。</p>
+        </div>
+        <div class="hl-angle-comment">
+          <div class="hl-angle-comment-top"><span class="hl-angle-cavatar" style="background:#ffa94d">老</span><b>老周修表</b><span>2 天前</span></div>
+          <p>被拍进视频的时候有点紧张，成片看下来很克制，没有刻意煽情，这点很尊重人。</p>
+        </div>
+        <div class="hl-angle-comment">
+          <div class="hl-angle-comment-top"><span class="hl-angle-cavatar" style="background:#7dd3fc">北</span><b>北岸数据员</b><span>3 天前</span></div>
+          <p class="hl-angle-stars">★★★★☆</p>
+          <p>数据类内容做得很扎实，图表可以下载这点太实用了。如果能把原始数据再补充字段说明就更完整。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 合作 + FAQ -->
+  <section class="hl-angle-section" id="hl-angle-faq">
+    <div class="hl-angle-wrap">
+      <div class="hl-angle-sechead">
+        <div>
+          <span class="hl-angle-kicker">Partners &amp; FAQ</span>
+          <h2>合作品牌与<span>常见问题</span></h2>
+        </div>
+        <p class="hl-angle-secmeta">合作墙 · 6 条 FAQ</p>
+      </div>
+      <div class="hl-angle-partners" style="margin-bottom:34px">
+        <div class="hl-angle-partner"><b>海隅影像</b><small>联合出品</small></div>
+        <div class="hl-angle-partner"><b>木石工坊</b><small>内容共建</small></div>
+        <div class="hl-angle-partner"><b>街区研究所</b><small>数据支持</small></div>
+        <div class="hl-angle-partner"><b>潮汐文化</b><small>版权合作</small></div>
+      </div>
+      <div class="hl-angle-faq">
+        <details>
+          <summary>黑料海角网的视频素材来源如何核实？</summary>
+          <p>平台采用采、核、修、审四道工序。原创素材需提供拍摄记录与联系人；第三方素材需提供授权文件或明确标注使用范围。每支视频页面的“来源清单”会列出关键素材的获取方式与核对时间。</p>
+        </details>
+        <details>
+          <summary>如何申请成为创作者并上传作品？</summary>
+          <p>点击页面中的投稿入口，填写方向、过往作品与联系方式。审核通常在五个工作日内完成。通过后进入素材规范培训，培训结束后即可在创作者中心上传作品并查看数据。</p>
+        </details>
+        <details>
+          <summary>视频的版权归属与收益分成是怎样的？</summary>
+          <p>创作者保留署名权与作品相关权益，平台获得约定范围内的展示与推广授权。分成按播放、收藏与线索采纳综合计算，每月固定日期结算，明细可在创作者中心查看。</p>
+        </details>
+        <details>
+          <summary>如果我认为某条内容侵犯了我的权益怎么办？</summary>
+          <p>可通过视频页的反馈入口提交异议，注明具体时间点与诉求。平台启动快速复核通道，涉及隐私与正在进行的程序会先行下架或脱敏处理，处理结果会在更新日志中公示。</p>
+        </details>
+        <details>
+          <summary>是否支持高清下载与教育授权？</summary>
+          <p>重点档案提供 4K 版本供观看，下载功能对合作机构与教育单位开放，需提交用途说明。公益与教育场景可申请免费授权，具体流程见常见问题附录。</p>
+        </details>
+        <details>
+          <summary>平台的内容透明度报告在哪里查阅？</summary>
+          <p>企业动态中会发布季度报告摘要，完整版在本页常见问题区附加入口。报告包含复核数量、线索采纳率、版权处理时长与创作者留存等指标。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 投稿 / 联系 -->
+  <section class="hl-angle-section" id="hl-angle-submit">
+    <div class="hl-angle-wrap">
+      <div class="hl-angle-cta">
+        <div>
+          <h2>把你的记录，交给<span style="color:var(--hl-angle-red)">黑料海角网</span></h2>
+          <p>如果你是记录者、手艺人或研究者，欢迎带上你的素材与故事。我们提供拍摄支持、剪辑协作与稳定的结算保障，也欢迎观众提交线索与补充材料。</p>
+          <div class="hl-angle-contacts">
+            <span>投稿邮箱：submit@example.com</span>
+            <span>合作咨询：partner@example.com</span>
+            <span>工作时间：周一至周五 10:00–19:00</span>
+          </div>
+        </div>
+        <div class="hl-angle-cta-actions">
+          <button class="hl-angle-btn hl-angle-btn-primary" id="hlAngleSubmitBtn">我要投稿</button>
+          <button class="hl-angle-btn hl-angle-btn-ghost" data-hl-share>分享本页</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="hl-angle-footer">
+  <div class="hl-angle-wrap">
+    <div class="hl-angle-footgrid">
+      <div class="hl-angle-footabout">
+        <div class="hl-angle-logo">
+          <span class="hl-angle-logo-mark">海</span>
+          <span class="hl-angle-logo-text">黑料海角网<small>OFFICIAL VIDEO PORTAL</small></span>
+        </div>
+        <p>黑料海角网官方网站，企业级视频档案与创作者社区。坚持原创、正版、高清与持续运营，以专业态度记录真实。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#hl-angle-videos">视频档案</a></li>
+          <li><a href="#hl-angle-topics">专题企划</a></li>
+          <li><a href="#hl-angle-focus">焦点内容</a></li>
+          <li><a href="#hl-angle-deep">深度解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>社区</h4>
+        <ul>
+          <li><a href="#hl-angle-authors">创作者矩阵</a></li>
+          <li><a href="#hl-angle-comments">用户口碑</a></li>
+          <li><a href="#hl-angle-submit">投稿入口</a></li>
+          <li><a href="#hl-angle-faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#hl-angle-about">品牌简介</a></li>
+          <li><a href="#hl-angle-news">企业动态</a></li>
+          <li><a href="#hl-angle-faq">合作与授权</a></li>
+          <li><a href="#hl-angle-home">返回首屏</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hl-angle-footbottom">
+      <span>© 2026 黑料海角网 版权所有 · 官方网站 · 持续运营中</span>
+      <span>内容备案号：示例备 20261122 号 · 广播电视节目制作经营许可（示例）</span>
+    </div>
+  </div>
+</footer>
+
+<button class="hl-angle-top" id="hlAngleTop" aria-label="回到顶部">↑</button>
+
+<!-- 弹窗：通用 -->
+<div class="hl-angle-modal" id="hlAngleModal" role="dialog" aria-modal="true" aria-labelledby="hlAngleModalTitle">
+  <div class="hl-angle-modal-box">
+    <button class="hl-angle-modal-close" id="hlAngleModalClose" aria-label="关闭">✕</button>
+    <div id="hlAngleModalContent"></div>
+  </div>
+</div>
+
+<div class="hl-angle-toast" id="hlAngleToast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('hlAngleToast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-show'); }, 2200);
+  }
+
+  /* 移动端导航折叠 */
+  var burger = document.getElementById('hlAngleBurger');
+  var nav = document.getElementById('hlAngleNav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      nav.classList.remove('is-open');
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById('hlAngleSearch');
+  var searchBtn = document.getElementById('hlAngleSearchBtn');
+  var searchMsg = document.getElementById('hlAngleSearchMsg');
+  var searchIndex = [
+    {t:'海角档案·第七季 4K 修复版', k:'档案 修复 深度'},
+    {t:'城市夜行：凌晨三点的搬运工', k:'城市 夜行 记录'},
+    {t:'数据里的街区：十年价格表', k:'数据 街区 民生'},
+    {t:'手艺人第三期：一把旧凿子传了四代人', k:'手艺 匠心 人物'},
+    {t:'城市口述史：码头边最后一批老船工', k:'口述史 码头 在地'},
+    {t:'海岸线三百公里专题', k:'专题 海岸 企划'},
+    {t:'创作者矩阵：岸边观察者 木与石', k:'作者 创作者 档案'},
+    {t:'常见问题：素材核实与版权分成', k:'faq 版权 投稿'}
+  ];
+  function doSearch(){
+    var q = searchInput.value.trim();
+    if(!q){
+      searchMsg.textContent = '请输入关键词后再搜索，例如“档案”“手艺”“城市”。';
+      return;
+    }
+    var hits = searchIndex.filter(function(item){
+      return item.t.indexOf(q) > -1 || item.k.indexOf(q) > -1;
+    }).slice(0,3);
+    if(hits.length){
+      searchMsg.textContent = '找到 ' + hits.length + ' 条相关结果：' + hits.map(function(h){return h.t;}).join('；');
+    }else{
+      searchMsg.textContent = '暂未找到“' + q + '”相关内容，可尝试更短的关键词，或通过投稿入口提交线索。';
+    }
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+  });
+
+  /* 点赞 / 收藏 */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-hl-like]');
+    if(likeBtn){
+      var numEl = likeBtn.querySelector('span');
+      var n = parseInt(numEl.textContent.replace(/,/g,''),10) || 0;
+      var on = likeBtn.classList.toggle('is-on');
+      n = on ? n + 1 : n - 1;
+      numEl.textContent = n.toLocaleString('en-US');
+      likeBtn.firstChild.nodeValue = on ? '♥ 已赞 ' : '♡ 点赞 ';
+      toast(on ? '已点赞，感谢支持' : '已取消点赞');
+      return;
+    }
+    var favBtn = e.target.closest('[data-hl-fav]');
+    if(favBtn){
+      var fav = favBtn.classList.toggle('is-fav');
+      favBtn.textContent = fav ? '★ 已收藏' : '☆ 收藏';
+      toast(fav ? '已加入收藏夹' : '已取消收藏');
+      return;
+    }
+    var shareBtn = e.target.closest('[data-hl-share]');
+    if(shareBtn){
+      var url = 'https://example.com/haijiao';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(url).then(function(){
+          toast('页面链接已复制，可分享至微信 / 微博');
+        }).catch(function(){
+          toast('分享链接：' + url);
+        });
+      }else{
+        toast('分享链接：' + url);
+      }
+      return;
+    }
+    var reportBtn = e.target.closest('[data-hl-report]');
+    if(reportBtn){
+      openReport();
+      return;
+    }
+    var authorBtn = e.target.closest('[data-hl-author]');
+    if(authorBtn){
+      openAuthor(authorBtn.getAttribute('data-hl-author'));
+      return;
+    }
+  });
+
+  /* 弹窗 */
+  var modal = document.getElementById('hlAngleModal');
+  var modalContent = document.getElementById('hlAngleModalContent');
+  var modalClose = document.getElementById('hlAngleModalClose');
+  function openModal(html){
+    modalContent.innerHTML = html;
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modal.classList.remove('is-open');
+    modalContent.innerHTML = '';
+    document.body.style.overflow = '';
+  }
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){
+    if(e.target === modal){ closeModal(); }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && modal.classList.contains('is-open')){ closeModal(); }
+  });
+
+  function openSubmit(){
+    openModal(
+      '<h3 id="hlAngleModalTitle">投稿给黑料海角网</h3>' +
+      '<p>请填写基本信息，内容团队会在五个工作日内回复。</p>' +
+      '<form id="hlAngleSubmitForm">' +
+      '<label for="hlSubName">昵称 / 团队名</label>' +
+      '<input id="hlSubName" required maxlength="30" placeholder="例如：木与石">' +
+      '<label for="hlSubDir">内容方向</label>' +
+      '<select id="hlSubDir"><option>深度档案</option><option>人物访谈</option><option>城市探索</option><option>手艺与旧物</option><option>数据与民生</option></select>' +
+      '<label for="hlSubMail">联系邮箱</label>' +
+      '<input id="hlSubMail" type="email" required placeholder="name@example.com">' +
+      '<label for="hlSubDesc">作品简介</label>' +
+      '<textarea id="hlSubDesc" maxlength="200" placeholder="简单介绍选题、素材来源与拍摄计划"></textarea>' +
+      '<button class="hl-angle-btn hl-angle-btn-primary" type="submit" style="justify-content:center">提交投稿</button>' +
+      '</form>'
+    );
+    var form = document.getElementById('hlAngleSubmitForm');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      closeModal();
+      toast('投稿已提交，感谢你的记录');
+    });
+  }
+
+  function openReport(){
+    openModal(
+      '<h3 id="hlAngleModalTitle">反馈与举报</h3>' +
+      '<p>请选择问题类型，我们会按社区规则启动复核通道。</p>' +
+      '<div class="hl-angle-report-reasons" id="hlAngleReasons">' +
+      '<button type="button" class="hl-angle-mini">素材来源存疑</button>' +
+      '<button type="button" class="hl-angle-mini">涉及隐私</button>' +
+      '<button type="button" class="hl-angle-mini">版权问题</button>' +
+      '<button type="button" class="hl-angle-mini">内容错误</button>' +
+      '</div>' +
+      '<label for="hlRepDesc" style="font-size:.78rem;color:#a9b4c4">补充说明</label>' +
+      '<textarea id="hlRepDesc" maxlength="200" placeholder="请注明具体时间点与诉求（选填）" style="min-height:80px"></textarea>' +
+      '<button class="hl-angle-btn hl-angle-btn-primary" type="button" id="hlRepSend" style="margin-top:12px;justify-content:center">提交反馈</button>'
+    );
+    var reasons = document.getElementById('hlAngleReasons');
+    reasons.addEventListener('click', function(e){
+      var b = e.target.closest('button');
+      if(!b) return;
+      Array.prototype.forEach.call(reasons.querySelectorAll('button'), function(x){ x.classList.remove('is-on'); });
+      b.classList.add('is-on');
+    });
+    document.getElementById('hlRepSend').addEventListener('click', function(){
+      closeModal();
+      toast('反馈已收到，复核结果将在更新日志中公示');
+    });
+  }
+
+  var authorData = {
+    '岸边观察者': {tag:'档案作者', desc:'长期跟踪公共事件的时间线，作品以冷静、少结论、多细节著称。擅长把零散素材整理成可核对的记录，并在视频页公开来源清单。', stat:'作品 86 · 粉丝 24.7 万 · 领域 深度档案'},
+    '木与石': {tag:'特邀记录者', desc:'专注手艺人与旧物题材，拍摄周期以月计。坚持在工坊里等到重复动作稳定后再开机，画面偏爱自然光与环境声。', stat:'作品 54 · 粉丝 17.2 万 · 领域 匠心手艺'},
+    '海风录': {tag:'城市记录者', desc:'以城市口述史为主线，走访码头、车站与老街区，用手绘地图串联受访者记忆，作品常附可下载路线与资料索引。', stat:'作品 71 · 粉丝 19.8 万 · 领域 城市探索'},
+    '街区调查组': {tag:'团队账号', desc:'由三名研究者与两名剪辑师组成，擅长把公开数据与实地采访对照呈现，视频中的图表与原始数据表均可下载。', stat:'作品 39 · 粉丝 12.4 万 · 领域 数据与民生'}
+  };
+  function openAuthor(name){
+    var d = authorData[name];
+    if(!d) return;
+    openModal(
+      '<h3 id="hlAngleModalTitle">' + name + '</h3>' +
+      '<p style="color:var(--hl-angle-cyan);font-size:.8rem">' + d.tag + ' · ' + d.stat + '</p>' +
+      '<p>' + d.desc + '</p>' +
+      '<p style="font-size:.8rem;color:#7d8899">在黑料海角网创作者矩阵中，该账号的全部作品均经过素材核验与字幕校对。</p>'
+    );
+  }
+
+  document.getElementById('hlAngleSubmitBtn').addEventListener('click', openSubmit);
+  document.getElementById('hlAngleHeroSubmit').addEventListener('click', function(e){
+    e.preventDefault();
+    openSubmit();
+  });
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('hlAngleTop');
+  window.addEventListener('scroll', function(){
+    if(window.pageYOffset > 480){ topBtn.classList.add('is-show'); }
+    else{ topBtn.classList.remove('is-show'); }
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+  </html>
